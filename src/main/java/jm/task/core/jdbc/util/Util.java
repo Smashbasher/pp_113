@@ -6,10 +6,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Util {
-    private static final String DB_DRIVER = "org.postgresql.Driver";
-    private static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
-    private static final String DB_USERNAME = "postgres";
-    private static final String DB_PASSWORD = "postgres";
+    public static final String DB_DRIVER = "org.postgresql.Driver";
+    public static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
+    public static final String DB_USERNAME = "postgres";
+    public static final String DB_PASSWORD = "postgres";
 
     public static Connection getConnection() {
         Connection connection = null;

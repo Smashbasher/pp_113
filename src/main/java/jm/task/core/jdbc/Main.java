@@ -11,18 +11,18 @@ public class Main {
 
     public static void main(String[] args) {
         Util.getConnection();
-        UserDao userDao = new UserDaoJDBCImpl();
+        UserService userService = new UserServiceImpl();
 
-        userDao.createUsersTable();
+        userService.createUsersTable();
 
-        userDao.saveUser("Jason", "Williams", (byte) 46);
-        userDao.saveUser("Stephen", "Curry", (byte) 34);
-        userDao.saveUser("Lebron", "James", (byte) 37);
-        userDao.saveUser("Shaq", "O'Neal", (byte) 50);
+        userService.saveUser("Jason", "Williams", (byte) 46);
+        userService.saveUser("Stephen", "Curry", (byte) 34);
+        userService.saveUser("Lebron", "James", (byte) 37);
+        userService.saveUser("Shaq", "O'Neal", (byte) 50);
 
-        userDao.removeUserById(1);
-        userDao.getAllUsers();
-        userDao.cleanUsersTable();
-        userDao.dropUsersTable();
+        userService.removeUserById(1);
+        userService.getAllUsers();
+        userService.cleanUsersTable();
+        userService.dropUsersTable();
     }
 }
